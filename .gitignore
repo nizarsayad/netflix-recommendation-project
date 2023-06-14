@@ -1,0 +1,9 @@
+00-data
+netflix-project/01-preprocess/filtered_data.csv
+netflix-project/01-preprocess/processed_data.csv
+test.ipynb
+secrets.sh
+preprocess_test.ipynb
+.env
+__pycache__/
+mynotes.md
