@@ -7,4 +7,4 @@ preprocess_test.ipynb
 .env
 __pycache__/
 mynotes.md
-.DS_Store/
+.DS_Store
