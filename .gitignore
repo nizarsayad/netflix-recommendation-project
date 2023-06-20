@@ -5,6 +5,6 @@ test.ipynb
 secrets.sh
 preprocess_test.ipynb
 .env
-__pycache__/
+__pycache__
 mynotes.md
 .DS_Store
