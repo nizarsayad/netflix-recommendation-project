@@ -12,7 +12,6 @@ from cf_step.step import Step
 from torch.utils.data import TensorDataset, DataLoader
 from cf_step.losses import FlatBCELoss, FlatCrossEntropyLoss, FlatMSELoss
 
-
 # ------ Data Preparation ------
 
 # Rename columns
