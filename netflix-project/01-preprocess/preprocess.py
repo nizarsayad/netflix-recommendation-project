@@ -1,6 +1,8 @@
 import pandas as pd
 import os
 import time
+import boto3
+from botocore.exceptions import ClientError
 def process_chunk(chunk, prev_movie_id):
     # Convert the "customer_id" column to string type
     chunk.reset_index(drop=True, inplace=True)
@@ -41,6 +43,7 @@ def process_chunk(chunk, prev_movie_id):
 
     processed_chunk = pd.concat(data, ignore_index=True)
     return processed_chunk, next_movie_id
+
 
 def process_files(chunksize:int = 1000000, drop_date:bool = False):
 
