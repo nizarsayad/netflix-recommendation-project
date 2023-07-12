@@ -16,7 +16,6 @@ st.set_page_config(
 pgdb_uri = os.getenv("POSTGRES_DB_URI")
 api_key = os.getenv("POSTER_API")
 
-@st.cache_data
 def get_predictions():
     engine = create_engine(pgdb_uri)
     # Query first row of the table sorted by descending order
