@@ -40,6 +40,7 @@ This is the folder containing the Kafka streaming process. It includes the follo
 - consumer.py: A Python script that receives the Netflix API's data, produced by producer.py every 12 seconds and calls the model (from the mlflow registry), makes the predictions and sends the data to a Postgres database.
 - requirements.txt: A text file that enables the installation of all required Python packages to run the python scripts.
 - run.sh: shell command to launch the Docker container that allows to run the kafka scripts.
+- _python.config: this file is the same as the python.config, however I removed the confluent credentials for security reasons.
 
 # 🚀 webapp 🚀
 This is a webapp created to showcase the results of the predictions.<br>
