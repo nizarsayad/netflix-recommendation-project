@@ -1,11 +1,9 @@
-00-data
-netflix-project/01-preprocess/filtered_data.csv
-netflix-project/01-preprocess/processed_data.csv
-test.ipynb
+netflix-project/00-data/combined_data_2.txt
+netflix-project/00-data/combined_data_3.txt
+netflix-project/00-data/combined_data_4.txt
 secrets.sh
-preprocess_test.ipynb
+archive
 .env
 __pycache__
-mynotes.md
 .DS_Store
 python.config
