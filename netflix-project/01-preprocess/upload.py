@@ -2,6 +2,7 @@ import os
 import time
 import boto3
 from botocore.exceptions import ClientError
+import argparse
 
 def upload_file_to_s3(bucket_name, file_name, object_name= None):
     # Connect to session
@@ -31,8 +32,21 @@ def upload_file_to_s3(bucket_name, file_name, object_name= None):
 if __name__ == "__main__":
     # Start timer
     start_time = time.time()
-    upload_file_to_s3(bucket_name="ns-data-resources-bucket", file_name="processed_data.csv")
-    upload_file_to_s3(bucket_name="ns-data-resources-bucket", file_name="filtered_data.csv")
+    # Create the parser
+    parser = argparse.ArgumentParser(description='Upload files to S3')
+
+    # Add the arguments
+    parser.add_argument('FileName', metavar='file_name', type=str, help='the name of the file')
+
+
+    # Parse the arguments
+    args = parser.parse_args()
+
+    # Start timer
+    start_time = time.time()
+
+    # Call the function with the command-line arguments
+    upload_file_to_s3(bucket_name="ns-data-resources-bucket", file_name=args.FileName)
     # End timer
     end_time = time.time()
     print(f"Total time: {end_time - start_time} seconds")

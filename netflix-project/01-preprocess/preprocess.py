@@ -1,9 +1,21 @@
 import pandas as pd
 import os
 import time
-import boto3
-from botocore.exceptions import ClientError
 def process_chunk(chunk, prev_movie_id):
+    """
+    Processes a chunk of the Netflix dataset.
+    
+    This function takes a chunk of data and a movie ID from the previous chunk. It converts the "customer_id" column 
+    to a string, identifies movie IDs and creates a DataFrame with movie IDs, customer IDs, ratings, and dates.
+    
+    Parameters:
+    chunk (DataFrame): A chunk of the Netflix dataset
+    prev_movie_id (str): The movie ID from the previous chunk
+
+    Returns:
+    DataFrame: A DataFrame with the processed chunk
+    str: The movie ID for the next chunk
+    """
     # Convert the "customer_id" column to string type
     chunk.reset_index(drop=True, inplace=True)
     chunk["customer_id"] = chunk["customer_id"].astype(str)
@@ -46,7 +58,19 @@ def process_chunk(chunk, prev_movie_id):
 
 
 def process_files(chunksize:int = 1000000, drop_date:bool = False):
+    """
+    Processes the Netflix dataset.
 
+    This function reads the Netflix dataset from four separate files in chunks. It applies the process_chunk function 
+    to each chunk, combines all chunks into a single DataFrame, and saves it to a CSV file named "processed_data.csv".
+    
+    Parameters:
+    chunksize (int, optional): The size of chunks to split the dataset into. Default is 1,000,000.
+    drop_date (bool, optional): Whether to drop the "date" column from the processed data. Default is False.
+
+    Returns:
+    None
+    """
     # Process data in chunks
     chunksize = chunksize
     data_files = ["combined_data_1.txt", "combined_data_2.txt", "combined_data_3.txt", "combined_data_4.txt"]
@@ -86,7 +110,20 @@ def process_files(chunksize:int = 1000000, drop_date:bool = False):
         del master_df
     
     print("Done processing all files!")
-    
+
+def handle_bad_lines(line):
+    fields =[str(field) for field in line]
+    movie_id = int(fields[0])
+    release_year = int(fields[1])
+    combined_title = ''.join(fields[2:]).strip()
+    return movie_id, release_year, combined_title
+
+movies = pd.read_csv("../00-data/movie_titles.csv", 
+                              names = ['movie_id', 'release_year', 'movie_title'], 
+                              encoding='ISO-8859-1', 
+                              engine='python', 
+                              on_bad_lines=handle_bad_lines)
+movies.to_csv("movie_titles_clean.csv", index=False)    
 
 if __name__ == "__main__":
     # Start timer
