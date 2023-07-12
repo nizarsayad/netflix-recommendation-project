@@ -1,0 +1,14 @@
+psycopg2-binary
+SQLAlchemy
+mlflow==2.4
+s3fs
+fsspec
+boto3
+botocore
+numpy==1.24.3
+psutil
+scikit-surprise
+confluent-kafka
+avro
+requests
+certifi
