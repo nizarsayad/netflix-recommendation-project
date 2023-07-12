@@ -24,7 +24,6 @@ This folder contains multiple scripts that process the data from Kaggle.
 This folder contains the Dockerfile, requirements.txt as well as the necessary bash command to run the mlflow tracking server. The env variables are sourced from a secrets.sh.
 In order to run your own tracking server, you need to provide the necessary credentials as shown in the run.sh file.
 
-
 # 🧠 training 🧠 
 This folder contains a notebook for model training.
 Using mlflow, we trained a matrix factorization model from the recommendation specialized library **surprise lib**. Then using mlflow Model Registry, we have registered our model, in order to use it to make predictions.
