@@ -6,8 +6,8 @@ Below is a description of the content and purpose of each folder in this reposit
 <br>
 
 # 💾 data 💾
-This is the data source folder. For convenience, and to be able to push the repository to github, only one of the ratings file is displayed, as well as the movie_titles file.
-A link to the data on my google drive:
+This is the data source folder. For convenience, and to be able to push the repository to github, only the movie_titles file is displayed.
+A link to all the data on my google drive:
 https://drive.google.com/drive/folders/1saDjScbiCCmy6Ho2ilo8rstZEX5i3iNJ?usp=drive_link
 This data can be accessed as well on:
 https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data
