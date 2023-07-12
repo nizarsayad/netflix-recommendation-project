@@ -42,7 +42,7 @@ This is the folder containing the Kafka streaming process. It includes the follo
 - requirements.txt: A text file that enables the installation of all required Python packages to run the python scripts.
 - run.sh: shell command to launch the Docker container that allows to run the kafka scripts.
 - _python.config: this file is the same as the python.config, however I removed the confluent credentials for security reasons.
-- Demo video link: https://share.vidyard.com/watch/ENu6WyRmwU4hs5u9PVRUWj?
+- Demo video link: https://share.vidyard.com/watch/ENu6WyRmwU4hs5u9PVRUWj
 
 # 🚀 webapp 🚀
 This is a webapp created to showcase the results of the predictions.<br>
