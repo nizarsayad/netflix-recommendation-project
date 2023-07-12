@@ -2,8 +2,10 @@
 # 🍿 Netflix-recommendation-engine 🍿
 This repository houses all resources related to the project presentation on the Netflix recommendation engine.
 <br><br>
-Below is a description of the content and purpose of each folder in this repository.<br>
-<br>
+Below is a description of the content and purpose of each folder in this repository.<br><br>
+
+A link to the schema of the infrastructure:
+https://docs.google.com/presentation/d/1IGO3j95eQEaahQ4QJ1naZqBAR1bNOCLGfmwDx157WFc/edit?usp=sharing
 
 # 💾 data 💾
 This is the data source folder. For convenience, and to be able to push the repository to github, only the movie_titles file is displayed.
