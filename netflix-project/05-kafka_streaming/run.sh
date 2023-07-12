@@ -1,1 +1,0 @@
-docker run -it -v "$(pwd):/home/app" nizarsayad/confluent-image bash
