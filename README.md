@@ -15,6 +15,8 @@ https://drive.google.com/drive/folders/1saDjScbiCCmy6Ho2ilo8rstZEX5i3iNJ?usp=dri
 This data can be accessed as well on:
 https://www.kaggle.com/datasets/netflix-inc/netflix-prize-data
 
+This project is part of the professional certification Machine Learning Engineer (Concepteur Développeur en Science des données) and represents bloc 1 of the certification titled: "Build & Manage a Data Infrastructure".
+
 # ⚙️ preprocess ⚙️ 
 This folder contains multiple scripts that process the data from Kaggle.
 - The *preprocess.py* script is designed to transform the Netflix Prize dataset into a more manageable and useful format for further analysis or machine learning tasks. The script is memory-efficient as it processes the data in chunks, making it suitable for large datasets.
