@@ -7,6 +7,8 @@ Below is a description of the content and purpose of each folder in this reposit
 A link to the schema of the infrastructure:
 https://docs.google.com/presentation/d/1IGO3j95eQEaahQ4QJ1naZqBAR1bNOCLGfmwDx157WFc/edit?usp=sharing
 
+The link to the vidyard video is [here](https://share.vidyard.com/watch/JRMe9NtN5ippc2vo5iEynb?)
+
 # 💾 data 💾
 This is the data source folder. For convenience, and to be able to push the repository to github, only the movie_titles file is displayed.
 A link to all the data on my google drive:
