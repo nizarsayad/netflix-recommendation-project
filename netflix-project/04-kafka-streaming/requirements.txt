@@ -1,11 +1,11 @@
 psycopg2-binary
 SQLAlchemy
-mlflow==2.4
+mlflow==2.5
 s3fs
 fsspec
 boto3
 botocore
-numpy==1.24.3
+numpy
 psutil
 scikit-surprise
 confluent-kafka
